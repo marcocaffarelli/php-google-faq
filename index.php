@@ -34,22 +34,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Php-google-faq</title>
     </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 60%;
+            margin: auto;
+            padding: 50px 0;
+        }
+        h2{
+            margin: 20px 0;
+        }
+    </style>
     <body>
+        <div class="container">
+            <?php foreach ($domandeFrequenti as $domanda => $risposta) { ?>
+                    <div>
+                        <h2>
+                            <?php 
+                                echo $domanda;
+                            ?>
+                        </h2>
 
-        <?php foreach ($domandeFrequenti as $domanda => $risposta) { ?>
-                <div>
-                    <h2>
-                        <?php 
-                            echo $domanda;
-                        ?>
-                    </h2>
-
-                    <p>
-                        <?php 
-                            echo $risposta;
-                        ?>
-                    </p>
-                </div>
-        <?php } ?>
+                        <p>
+                            <?php 
+                                echo $risposta;
+                            ?>
+                        </p>
+                    </div>
+            <?php } ?>
+        </div>
     </body>
 </html>
