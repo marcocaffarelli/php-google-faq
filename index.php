@@ -33,23 +33,69 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Php-google-faq</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     </head>
     <style>
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        nav{
+            height: 80px;
+            border-bottom: 1px solid lightgrey;
+        }
+        nav img{
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+        nav h2{
+            display: inline-block;
+            position: relative;
+            bottom: 7px;
+        }
+        nav ul{
+            margin-top: 11px;
+        }
+        nav li{
+            display: inline-block;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+        nav li:hover{
+            color: blue;
+            border-bottom: 3px solid blue;
         }
         .container{
             width: 60%;
             margin: auto;
             padding: 50px 0;
         }
-        h2{
+        .container h2{
             margin: 20px 0;
         }
+
     </style>
     <body>
+        <nav>
+            <div>
+                <img src="./img/google.png">
+                <h2>Privacy &#38; Termini</h2>
+            </div>
+            <div>
+                <ul>
+                    <li><a>Introduzione</a></li>
+                    <li><a>Norme sulla privacy</a></li>
+                    <li><a>Termini di servizio</a></li>
+                    <li><a>Tecnologie</a></li>
+                    <li><a>Domande frequenti</a></li>
+                </ul>
+            </div>
+        </nav>
         <div class="container">
             <?php foreach ($domandeFrequenti as $domanda => $risposta) { ?>
                     <div>
